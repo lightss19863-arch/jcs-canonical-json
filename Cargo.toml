@@ -1,0 +1,12 @@
+[package]
+name = "jcs-canonical-json"
+version = "0.1.0"
+edition = "2021"
+description = "RFC 8785 JSON Canonicalization Scheme — deterministic JSON serialization for signing and hashing"
+license = "MIT"
+repository = "https://github.com/lightss19863-arch/jcs-canonical-json"
+keywords = ["json", "canonicalization", "rfc8785", "signing", "deterministic"]
+categories = ["encoding", "cryptography"]
+
+[dependencies]
+serde_json = "1"
