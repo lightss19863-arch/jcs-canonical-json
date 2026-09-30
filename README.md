@@ -6,7 +6,7 @@ I wrote this because I needed deterministic JSON serialization for receipt signi
 
 There are other JCS crates, but the ones I tried either:
 - pulled in a surprising number of dependencies for what's essentially string formatting
-- got the key sort order wrong for characters above U+FFFF (the spec says sort by UTF-16 code units, not UTF-8 bytes — the difference matters for emoji and musical symbols because they become surrogate pairs)
+- got the key sort order wrong for characters above U+FFFF (the spec says sort by UTF-16 code units, not UTF-8 bytes the difference matters for emoji and musical symbols because they become surrogate pairs)
 
 The second issue cost me a full afternoon of debugging before I realized my receipt verification was failing because `𝌆` (U+1D306) was sorting differently on each side. Fun times.
 
